@@ -1,0 +1,41 @@
+﻿<Window x:Class="OsEngine.Robots.WindowMyRobot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OsEngine.Robots"
+        mc:Ignorable="d"
+        Title="WindowMyRobot" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+               <Setter Property="FontSize" Value="36"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Привет, я твой робот" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <TextBlock Text="CountCandles =" Grid.Row="1" Grid.Column="0"/>
+        <!--<TextBlock Text="Stop =" Grid.Row="2" Grid.Column="0"/>
+        <TextBlock Text="Take =" Grid.Row="3" Grid.Column="0"/>-->
+
+        <TextBox Text="{Binding CountCandles}" Grid.Row="1" Grid.Column="1"/>
+        <!--<TextBox Text="{Binding SetStop}" Grid.Row="2" Grid.Column="1"/>
+        <TextBox Text="{Binding SetTake}" Grid.Row="3" Grid.Column="1"/>-->
+
+    </Grid>
+    
+</Window>
